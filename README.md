@@ -1,12 +1,14 @@
-# How to Run
+# TG RASA
 
-Dependencies:
+## How to Run
+
+### Dependencies:
 ```
 pip install rasa
 pip install pyTigerGraph
 ```
 
-To run:
+### To run:
 - Open a box (in the example, COVID-19)
 - Adjust `self.conn = tg.TigerGraphConnection` as necessary (based on the box)
 - In one terminal, run `rasa run actions`.
