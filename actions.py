@@ -18,7 +18,7 @@ class ActionAge(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         text = self.conn.runInstalledQuery("ageDistribution")
         # print(text)
-        dispatcher.utter_message(text=str(text[0]["@@ageMap"]["4"]))
+        dispatcher.utter_message(text="There are " + str(text[0]["@@ageMap"]["4"]) + " COVID-19 patients who are four.")
         return []
 
 
@@ -38,5 +38,5 @@ class ActionInfected(Action):
         if (text[0]["Infected_Patients"] == []):
             dispatcher.utter_message(text="This patient infected no one!")
         else: 
-            dispatcher.utter_message(text=text[0]["Infected_Patients"])
+            dispatcher.utter_message(text="Fun Fact: Patient 6100000110 Infected " + str(text[0]["Infected_Patients"]) + " Others!")
         return []
